@@ -26,7 +26,7 @@
           </tr>
         </thead>
         <tbody>
-          <tr ng-repeat="tarea in tareaCtrl.tareas | filter:filtroTareas" ng-click="tareaCtrl.seleccionarTarea(tarea)" ng-class="{selected: tarea.id === tareaCtrl.idTareaSeleccionada}">
+          <tr ng-repeat="tarea in tareaCtrl.tareas | filter:{descripcion:filtroTareas}" ng-click="tareaCtrl.seleccionarTarea(tarea)" ng-class="{selected: tarea.id === tareaCtrl.idTareaSeleccionada}">
             <td class="color-negro">{{tarea.id}}</td>
             <td class="color-negro">{{tarea.descripcion}}</td>
               <td class="color-negro">{{tarea.estado== true ? "SI":"NO"}}</td>

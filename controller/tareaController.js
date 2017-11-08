@@ -22,6 +22,7 @@ class TareaController{
            }else{
                this.TareaService.agregarTarea(new Tarea(this.TareaService.findMaxId(),this.nuevaTareaDescripcion))
                this.findTareas()
+               this.nuevaTareaDescripcion=''
            }
 
        }

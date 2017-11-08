@@ -1,11 +1,12 @@
 <div class="container-fluid">
-        
-           
+          <h2>Edicion tarea</h2>
+           <h4>Descripcion</h4>
             <div class="input-group" style="width:100% !important">
                     <input type="text" class="form-control" ng-value="editarCtrl.tarea[0].descripcion"  ng-model="nuevaDescripcion" ng-change="editarCtrl.cambiarDescripcion(nuevaDescripcion)" style="width:100% !important" >
                    
             </div>
-            <div class="input-group" style="width:40% !important">
+            <h4>Hecho</h4>
+            <div class="input-group" style="width:20% !important">
                     <span class="input-group-addon">HECHO:</span>
                     <span class="input-group-addon">
                       <input type="checkbox" aria-label="Checkbox"  ng-checked="{{editarCtrl.tarea[0].estado}}" ng-model="editarCtrl.confirmed" ng-change="editarCtrl.change(editarCtrl.confirmed)" id="ng-change-example1"  >
@@ -13,5 +14,6 @@
                   
                     
                   </div>
+                  <br/>
             <button type="button" class="btn btn-primary" ui-sref="tareas" >Volver</button>
 </div>
