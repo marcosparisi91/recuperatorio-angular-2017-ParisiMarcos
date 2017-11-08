@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en" ng-app="todoListApp">
+
+<head>
+  <meta charset="utf-8">
+  <title>Recuperatorio</title>
+
+  <!-- JQUERY -->
+  <script src="node_modules/jquery/dist/jquery.min.js"></script>
+  
+  <!-- BOOTSTRAP -->
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap-theme.min.css">
+  <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
+  <!-- ANGULAR  -->
+  <script src="node_modules/angular/angular.min.js"></script>
+  <script src="node_modules/angular-ui-router/release/angular-ui-router.min.js"></script>
+
+  <!-- LODASH  -->
+  <script src="node_modules/lodash/lodash.min.js"></script>
+
+  <!-- PROMISE  -->
+  <script src="node_modules/bluebird/js/browser/bluebird.min.js"></script>
+
+  <!-- TOTO-API  -->
+  <script src="node_modules/toto-api/index.js"></script>  
+  <style>
+    .selected {
+  background-color:cornflowerblue;
+}
+  </style>
+</head>
+
+<body>
+
+<div class="container">
+  <div class="page-header">
+    <h1>
+      Tareas
+    </h1>
+  </div>
+
+  <div class="well-lg">
+    <div ui-view></div>
+  </div>
+
+</div>
+
+<!-- js -->
+<script src="domain/tarea.js"></script>
+<script src="services/tareaService.js"></script>
+
+<script src="controller/tareaController.js"></script>
+<script src="controller/editarController.js"></script>
+
+<script src="routes.js"></script>
+<script src="app.js"></script>
+
+</body>
+</html>
+

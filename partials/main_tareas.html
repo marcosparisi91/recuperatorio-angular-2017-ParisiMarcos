@@ -1,0 +1,46 @@
+<div class="container-fluid">
+
+   
+    <div class="input-group">
+            <input type="text" class="form-control" placeholder="Nueva tarea" ng-model="tareaCtrl.nuevaTareaDescripcion" >
+            <span class="input-group-btn">
+                <button class="btn btn-primary" type="button" ng-click="tareaCtrl.insertarNuevaTarea()">Nueva Tarea</button>
+            </span>
+    </div>
+    <br/>
+    <div class="input-group" style="width:100% !important">
+        
+            <input type="text" class="form-control" placeholder="Filtrar Tareas" ng-model="filtroTareas" >
+           
+    </div>
+ 
+    <br/>
+    <table class="table table-bordered ">
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Tarea</th>
+            <th scope="col">Hecho</th>
+            
+            
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="tarea in tareaCtrl.tareas | filter:filtroTareas" ng-click="tareaCtrl.seleccionarTarea(tarea)" ng-class="{selected: tarea.id === tareaCtrl.idTareaSeleccionada}">
+            <td class="color-negro">{{tarea.id}}</td>
+            <td class="color-negro">{{tarea.descripcion}}</td>
+              <td class="color-negro">{{tarea.estado== true ? "SI":"NO"}}</td>
+              
+            </tr>
+            
+        </tbody>
+    </table>
+
+    <br/>
+    <button type="button" class="btn btn-primary" ng-click="tareaCtrl.cambiarEstado()">Hacer/Deshacer</button>
+    <button type="button" class="btn btn-primary" ng-click="tareaCtrl.editarSeleccionada()">Editar Seleccionada</button>
+
+   
+</div>
+
+

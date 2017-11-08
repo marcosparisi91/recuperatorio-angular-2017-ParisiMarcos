@@ -1,0 +1,20 @@
+{
+  "name": "contador-empanadas-angular",
+  "version": "1.0.0",
+  "description": "Recuperatorio Angular Marcos Parisi",
+  "scripts": {
+    "start": "http-server  -p 8000 -c-1"
+  },
+  "author": "Uqbar-Project",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "^1.6.6",
+    "angular-ui-router": "^0.4.3",
+    "bluebird": "^3.5.1",
+    "bootstrap": "^3.3.7",
+    "http-server": "^0.10.0",
+    "jquery": "^3.2.1",
+    "lodash": "^4.17.4",
+    "toto-api": "^2.0.0"
+  }
+}
